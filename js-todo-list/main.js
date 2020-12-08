@@ -12,6 +12,16 @@ window.addEventListener('DOMContentLoaded', function() {
         newspan = document.createElement('span')
         newspan.classList.add('close')
         newspan.textContent = 'x'
+
+        // newspan.onclick = function() {
+        //   var li = this.parentElement;
+        //   li.style.display = "none";
+        // }
+
+        newspan.addEventListener('click', function(){
+          console.log('!!')
+        })
+
         li.append(newspan)
         console.log(li)
         return li
@@ -28,13 +38,26 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     //hover
-    var list = document.querySelector('li');
-    list.addEventListener('click', function(e) {
-      debugger
-      if (e.target.tagName.toLowerCase() === 'li') {
-        e.target.classList.toggle('checked');
-      }
-    }, false);
+    // var list = document.querySelector('li');
+
+
+    // list.addEventListener('click', function(e) {
+    //   debugger
+    //   if (e.target.tagName.toLowerCase() === 'li') {
+    //     e.target.classList.toggle('checked');
+    //   }
+    // }, false);
+
+    var lists = document.querySelectorAll('li');
+
+    lists.forEach(function(e){
+      e.addEventListener('click', function(e) {
+        // debugger
+        if (e.target.tagName.toLowerCase() === 'li') {
+          e.target.classList.toggle('checked');
+        }
+      }, false);
+    })
 })
 
      
