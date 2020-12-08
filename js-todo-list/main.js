@@ -30,13 +30,14 @@ window.addEventListener('DOMContentLoaded', function() {
     //hover
     var list = document.querySelector('li');
     list.addEventListener('click', function(e) {
-    if (e.target.tagName === 'li') {
-    e.target.classList.toggle('checked');
-    }
+      debugger
+      if (e.target.tagName.toLowerCase() === 'li') {
+        e.target.classList.toggle('checked');
+      }
     }, false);
 })
 
-
+     
 
 
 // function() {
